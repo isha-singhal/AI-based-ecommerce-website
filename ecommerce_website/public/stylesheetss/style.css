@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+}
+
+/* body {
+  background-image: url('/images/background_.png');
+  background-repeat: repeat;
+  background-size: cover;
+} */
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+.brand-logo-icon {
+  margin-left: 8px;
+}
+
+.img_landing {
+  width: 100%;
+}
+
+.row_margin {
+  margin-top: 25px;
+  /* border: 2px solid green; */
+  /* background-color: gray; */
+}
+.card_img {
+  margin: auto auto;
+}

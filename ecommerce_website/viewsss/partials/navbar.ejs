@@ -1,0 +1,46 @@
+<header>
+  <nav>
+    <div class="nav-wrapper #18ffff cyan accent-2 black-text">
+      <a href="/" class="brand-logo m2 black-text"
+        >E_Cart<span class="material-icons brand-logo-icon">
+          shopping_cart
+        </span></a
+      >
+      <a href="/" data-target="mobile-demo" class="sidenav-trigger"
+        ><i class="material-icons black-text">menu</i></a
+      >
+      <ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="/">Home</a></li>
+        <% if( currUser && !currUser.buyer ) {%>
+        <li><a class="black-text" href="/sell/create">Create Products</a></li>
+        <% } %>
+        <li><a class="black-text" href="/buy">All Products</a></li>
+        <% if(!currUser) {%>
+        <li><a class="black-text" href="/">Register/Login</a></li>
+        <% }else { %>
+        <li><a class="black-text" href="/logout">Logout</a></li>
+        <%} if( currUser && currUser.products.length > 0 ) {%>
+        <li>
+          <a class="black-text" href="/sell/<%= (currUser._id) %>"
+            >My Products</a
+          >
+        </li>
+        <%}%>
+      </ul>
+    </div>
+  </nav>
+</header>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="/">Home</a></li>
+  <% if( currUser && !currUser.buyer ) {%>
+  <li><a href="/sell/create">Create Products</a></li>
+  <% } %>
+  <li><a href="/buy">All Products</a></li>
+  <% if(!currUser) {%>
+  <li><a href="/">Register/Login</a></li>
+  <% }else { %>
+  <li><a href="/logout">Logout</a></li>
+  <%} if( currUser && currUser.products.length > 0 ) {%>
+  <li><a href="/sell/<%= (currUser._id) %>">My Products</a></li>
+  <%}%>
+</ul>

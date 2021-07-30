@@ -1,0 +1,238 @@
+<% layout('boilerplate/boilerplate') %>
+
+<div class="container">
+  <div class="row row_margin z-depth-4">
+    <div class="col s12 m6 ">
+      <img src="/images/landingPage.jpg" class="img_landing" alt="">
+    </div>
+    
+    <div class="col s12 m6 ">
+      <div class="row">
+        <div class="col s12 ">
+          <h2 class="header">Welcome to E_Cart</h2>
+          <div class="card horizontal">
+            <div class="card-image card_img">
+              <img src="/images/2x/paid_2.png">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                
+                <div class="row">
+                  <div class="col s5"> <h5>Seller : </h5> 
+                    <div class="row">
+                    <a class="waves-effect waves-light btn modal-trigger col s12" href="#modal2"
+                    >Register</a>
+                </div>
+                
+                <div class="row">
+                <a class="waves-effect waves-light btn modal-trigger col s12" href="#modal22"
+                    >Login</a>
+
+                </div>
+                </div>
+                  <div class="col s5 offset-s2"> <h5> Buyer : </h5>
+
+                    <div class="row">
+                    <a class="waves-effect waves-light btn modal-trigger col s12 " href="#modal1">Register
+                  </a>
+                
+                </div>
+
+                <div class="row">
+                  <a class="waves-effect waves-light btn modal-trigger col s12 " href="#modal11">Login</a>
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+  
+    </div>
+      
+
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- modal 1 -->
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h5>Register as a Buyer</h5>
+    <div class="row">
+      <form class="col s12" action="/buy/" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="username" type="text" name="username" class="validate" autocomplete="off" />
+            <label for="username">Username</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" name="email" class="validate" autocomplete="off" />
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+            autocomplete="off"
+              id="password"
+              type="password"
+              name="password"
+              class="validate"
+            />
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <button
+          class="waves-effect waves-light btn modal-trigger"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<!-- buyer login  -->
+<div id="modal11" class="modal">
+  <div class="modal-content">
+    <h5>Login as a Buyer</h5>
+    <div class="row">
+      <form class="col s12" action="/buy/login" method="POST">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="username" type="text" name="username" class="validate" autocomplete="off" />
+            <label for="username">Username</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+            autocomplete="off"
+              id="password"
+              type="password"
+              name="password"
+              class="validate"
+            />
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <button
+          class="waves-effect waves-light btn modal-trigger"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<!-- modal 2 -->
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h5>Register as a Seller</h5>
+    <div class="row">
+      <form class="col s12" action="/sell" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input 
+            autocomplete="off" id="username" type="text" name="username" class="validate" />
+            <label for="username">Username</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" name="email" class="validate" autocomplete="off" />
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="password"
+              type="password"
+              name="password"
+              class="validate"
+              autocomplete="off"
+            />
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="waves-effect waves-light btn modal-trigger"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<!-- seller login  -->
+<div id="modal22" class="modal">
+  <div class="modal-content">
+    <h5>Login as a Seller</h5>
+    <div class="row">
+      <form class="col s12" action="/sell/login" method="POST">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="username" type="text" name="username" class="validate" autocomplete="off" />
+            <label for="username">Username</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="password"
+              type="password"
+              name="password"
+              class="validate"
+              autocomplete="off"
+            />
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <button
+          class="waves-effect waves-light btn modal-trigger"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>

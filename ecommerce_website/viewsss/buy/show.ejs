@@ -1,0 +1,36 @@
+<% layout('boilerplate/boilerplate') %>
+
+<!-- a product : -->
+<section class="container">
+  <div class="row">
+    <div class="col s12 m6 l6">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="/images/phone_<%=(Math.floor(Math.random() * 7) + 1 ) %>.png"
+          />
+          <span class="card-title"><%= product_.category %> </span>
+        </div>
+        <div class="card-content">
+          <h4>Product Details:</h4>
+          <p><%= product_.description %></p>
+        </div>
+        <div class="card-action">
+          <a href="#">Buy</a>
+          <a href="#">Add to cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6 l6">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <h4>Model: <%= product_.name %></h4>
+        </li>
+        <li class="collection-item">Price: <%= product_.price %></li>
+        <li class="collection-item">Rating: <%= product_.rating %></li>
+        <li class="collection-item">Quantity: <%= product_.quantity %></li>
+        <li class="collection-item">Sold by: <%= product_.owner.username %></li>
+      </ul>
+    </div>
+  </div>
+</section>

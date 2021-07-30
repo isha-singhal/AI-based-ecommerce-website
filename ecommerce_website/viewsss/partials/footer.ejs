@@ -1,0 +1,38 @@
+<footer class="page-footer #18ffff cyan accent-2 black-text">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="black-text">E_Cart</h5>
+        <p class="black-text text-lighten-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+          laudantium odit, ipsam architecto consequuntur aspernatur esse
+          voluptas tempore debitis dolore.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="black-text">Links</h5>
+        <ul>
+          <li><a class="black-text" href="/">Home</a></li>
+          <% if( currUser && !currUser.buyer ) {%>
+          <li><a class="black-text" href="/sell/create">Create Products</a></li>
+          <% } %>
+          <li><a class="black-text" href="/buy">All Products</a></li>
+          <% if(!currUser) {%>
+          <li><a class="black-text" href="/">Register/Login</a></li>
+          <% }else { %>
+          <li><a class="black-text" href="/logout">Logout</a></li>
+          <%} if( currUser && currUser.products.length > 0 ) {%>
+          <li>
+            <a class="black-text" href="/sell/<%= (currUser._id) %>"
+              >My Products</a
+            >
+          </li>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container black-text">© 2021 Copyright All Rights Reserved</div>
+  </div>
+</footer>

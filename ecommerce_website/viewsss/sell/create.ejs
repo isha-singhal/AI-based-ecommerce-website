@@ -1,0 +1,80 @@
+<% layout('boilerplate/boilerplate') %>
+
+<div class="row container">
+  <form class="col s6 offset-s3" method="POST" action="/sell/create">
+    <div class="row">
+      <h5>Create a product</h5>
+      <div class="input-field col s6">
+        <input
+          id="category"
+          name="product[category]"
+          type="text"
+          class="validate"
+          autocomplete="off"
+        />
+        <label for="category">Category</label>
+      </div>
+      <div class="input-field col s6">
+        <input
+          id="Model"
+          type="text"
+          name="product[name]"
+          class="validate"
+          autocomplete="off"
+        />
+        <label for="Model">Name</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          id="quantity"
+          type="number"
+          name="product[quantity]"
+          class="validate"
+          autocomplete="off"
+        />
+        <label for="quantity">Quantity</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          id="price"
+          type="number"
+          name="product[price]"
+          class="validate"
+          autocomplete="off"
+        />
+        <label for="price">Price per piece</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          id="ratings"
+          type="number"
+          name="product[rating]"
+          class="validate"
+          autocomplete="off"
+        />
+        <label for="ratings">Rating</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea
+          id="textarea1"
+          name="product[description]"
+          class="materialize-textarea"
+          autocomplete="off"
+        ></textarea>
+        <label for="textarea1">Description</label>
+      </div>
+    </div>
+    <button type="submit" class="waves-effect waves-light btn modal-trigger">
+      CREATE
+    </button>
+  </form>
+</div>

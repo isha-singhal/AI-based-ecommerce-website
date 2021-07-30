@@ -1,0 +1,34 @@
+<% layout('boilerplate/boilerplate') %>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <% for (const product of allProducts) {%>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/images/phone_<%= (Math.floor(Math.random() * 7) + 1 ) %>.png"
+            />
+
+            <span class="card-title"><%= product.category %> </span>
+          </div>
+          <div class="card-content">
+            <ul class="collection">
+              <li class="collection-item">
+                <h5><%= product.name %></h5>
+              </li>
+              <li class="collection-item">Price: <%= product.price %></li>
+              <li class="collection-item">Rating: <%= product.rating %></li>
+            </ul>
+          </div>
+
+          <div class="card-action">
+            <a href="buy/<%= product._id %>">View It</a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
